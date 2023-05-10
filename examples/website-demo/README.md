@@ -43,9 +43,11 @@ git clone https://github.com/uber/streetscape.gl.git
 cd streetscape.gl/examples/website-demo
 # install dependencies
 yarn
+# if erros happend when installing node-sass related modules, try yarn add {module} instead.
 # start the app
 yarn start-local
 ```
+
 
 ### Convert Kitti and NuTonomy data into xviz protocol
 

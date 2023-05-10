@@ -53,10 +53,12 @@ class Example extends PureComponent {
     if (logSettings.xvizConfig) {
       setXVIZConfig(logSettings.xvizConfig);
     }
-
+    const params = new URLSearchParams(window.location.search)
+    const path = params.get('path');
+    console.log(path);
     const loader = new XVIZFileLoader({
-      timingsFilePath: `${logSettings.path}/0-frame.json`,
-      getFilePath: index => `${logSettings.path}/${index + 1}-frame.glb`,
+      timingsFilePath: `${path}/0-frame.json`,
+      getFilePath: index => `${path}/${index + 1}-frame.glb`,
       worker: true,
       maxConcurrency: 4
     })

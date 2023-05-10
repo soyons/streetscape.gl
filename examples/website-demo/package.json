@@ -7,7 +7,8 @@
     "build-clean": "rm -rf dist && mkdir dist",
     "build-copy": "cp -r assets dist && cp index.html dist",
     "build-script": "NODE_ENV=production webpack  --env.local --env.prod",
-    "build": "npm run build-clean && npm run build-script && npm run build-copy"
+    "build": "npm run build-clean && npm run build-script && npm run build-copy",
+    "publish": "npm run build && cp -R dist/* streetscape.gl.github.io/"
   },
   "dependencies": {
     "@loaders.gl/core": "^1.3.0",

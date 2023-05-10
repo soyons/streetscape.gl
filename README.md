@@ -29,6 +29,7 @@ $ git clone https://github.com/uber/streetscape.gl.git
 $ cd streetscape.gl
 
 # Install dependencies
+# node v15.0.0
 $ yarn bootstrap
 
 # Run example
